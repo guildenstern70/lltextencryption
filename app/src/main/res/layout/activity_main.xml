@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fullscreen_content"
+    android:paddingTop="?android:attr/actionBarSize"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textEditor"
+        android:inputType="textMultiLine"
+        android:gravity="start|top"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:hint="Type your clear text here..."
+        android:layout_width="match_parent"
+        android:scrollbars="vertical" />
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal" >
+
+            <Button android:id="@+id/btnCut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cut" />
+
+            <Button android:id="@+id/btnCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy" />
+
+            <Button android:id="@+id/btnPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paste" />
+
+            <Button android:id="@+id/btnEncrypt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Encrypt" />
+
+        </LinearLayout>
+
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <EditText
+            android:id="@+id/textEncrypted"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:editable="false" />
+    </TableRow>
+
+</LinearLayout>
